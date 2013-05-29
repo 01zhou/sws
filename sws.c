@@ -1,3 +1,10 @@
+/* 
+ * SIT CS631 Final Project
+ * sws - Simple Web Server
+ * Yizhou Lin / ylin8 at stevens.edu
+ */
+
+
 #include "global.h"
 
 #include <sys/types.h>
