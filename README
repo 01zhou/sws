@@ -1,0 +1,36 @@
+sws - a simple web server.
+
+To compile it, please type:
+make
+
+SYNOPSIS
+sws [ −dh] [ −c dir] [ −i address] [ −l file] [ −p port] dir
+
+If dir is not given, it uses "./"
+
+It DOES support logging and POST.
+
+It already some test html files and cgi files.
+For test, please try:
+
+sws -c ./cgi-bin ./www
+
+
+This sws does not support -s or -k, because there is little informatin in the manual. 
+
+This sws does not suppert User Directory, because when I use firefox to send a request for testing, it always starts with '/'.
+
+firefox -> http://127.0.0.1:8000/
+What sws see -> GET / HTTP/1.0
+
+firefox -> http://127.0.0.1:8000/~hello/
+What sws see -> GET /~hello HTTP/1.0
+
+About porting:
+(1) It cannot compiled in cs631-omnios.netmeister.org
+(2) I use telnet to test it in linux-lab.cs.stevens.edu and it seems good. I didn't test POST.
+(3) When it is in cs631-netbsd.netmeister.org, every request I sent is Bad Request. 
+(4) When it is in cs631-rhel.netmeister.org, it seems that something wrong with putenv, so that GET+CGI doesn't work, but POST+CGI works. All other functions are OK.
+(5) It works perfectly in my own computer.
+(6) I launched an Amazon EC2 Instance, which is Amazon Linux AMI 2012.09, 64 bit. I uploaded my code to there and compiled it. It is running correctly. The address is ec2-50-17-41-91.compute-1.amazonaws.com. It is listening to port 8080. It is running as good as that in my own computer.
+

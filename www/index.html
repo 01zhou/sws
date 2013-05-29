@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>SWS server</title>
+  </head>
+  <body>
+    <h1>SWS server is runing!</h1>
+	<a href="a_page.html">Link to a HTML page.</a><br/>
+	<a href="a_file.txt">Link to a txt file.</a><br/>
+	<a href="a_link_does_not_exist">Link to a file that doesn't exist.</a><br/>
+	<a href="folder/">Link to a folder that has index.html</a><br/>
+	<a href="folder2/">Link to a folder that doesn't have index.html</a><br/>
+	<a href="cgi-bin/hello.cgi">Link to a simple CGI file.</a><br/>
+
+	<table border="1"><tr><td>	
+	<u>Form to a CGI file that accepts inputs.</u><br/><br/>
+	<form action="cgi-bin/mult.cgi">
+	<label>Multiplicand 1: <input name="m" size="5" value="3"></label><br/>
+	<label>Multiplicand 2: <input name="n" size="5" value="5"></label><br/>
+	<input type="submit" value="Multiply!"></form>
+	</td></tr>
+	</table>
+
+<table border="1"><tr><td>
+<u>Form that support POST method.</u>
+<FORM ACTION="/cgi-bin/post.cgi" METHOD="POST">
+<INPUT NAME="data" SIZE="60" MAXLENGTH="80" VALUE="Hello, World!"><BR>
+<INPUT TYPE="SUBMIT" VALUE="Send"></DIV>
+</FORM>
+</table>
+
+  </body>
+</html>
+
+

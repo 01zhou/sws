@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>SWS server</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+	This page is correctly loaded.
+  </body>
+</html>
+
+
